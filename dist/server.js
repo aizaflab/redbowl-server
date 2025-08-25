@@ -21,9 +21,9 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         //
         cloudinary_1.v2.config({
-            cloud_name: 'dhveyw0zn',
-            api_key: '223823328644645',
-            api_secret: 'm2qwuF2XJFdfldz1qm838xVcmcM',
+            cloud_name: 'dhinbqftm',
+            api_key: '682814992328736',
+            api_secret: 'B1SaveD-NVUxRH3zTLWA9-sts5g',
         });
         // Connect to MongoDB
         yield mongoose_1.default.connect(config_1.default.database);

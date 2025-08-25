@@ -37,8 +37,8 @@ const userSchema = new mongoose_1.Schema({
     role: {
         type: String,
         require: true,
-        enum: ['admin', 'user', 'owner'], // roles add  clearing, helper,other,
-        default: 'user',
+        enum: ['admin', 'user', 'owner'],
+        default: 'admin',
     },
     isBlocked: {
         type: Boolean,
