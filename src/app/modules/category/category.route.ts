@@ -8,6 +8,7 @@ import { categoryPublicController } from './public/category.public.controller'
 const router = express.Router()
 // public 
 router.get('/public/', categoryPublicController.getAllPublicCategory)
+router.get('/public/:slug', categoryPublicController.getSlugPubliCategory)
 
 //auth
 router.post('/', auth.authUser, validationRequest(createCategoryValidationSchema), categoryController.createCategory)

@@ -20,5 +20,18 @@ const getAllPublicCategory = catchAsync(async (req, res) => {
 
 })
 
+const getSlugPubliCategory = catchAsync(async (req, res) => {
+    const {slug} = req.params;
+    const result = await CategoryPublicService.slugPublicCategoryIntoDB(slug)
+    sendResponse(res, {
+        statusCode: httpStatus.CREATED,
+        success: true,
+        message: "Category created successfully",
+        data: result
+    })
 
-export const categoryPublicController = { getAllPublicCategory }
+})
+
+
+
+export const categoryPublicController = { getAllPublicCategory,getSlugPubliCategory }
