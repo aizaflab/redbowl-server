@@ -30,4 +30,14 @@ const getAllPublicCategory = (0, catchAsync_1.default)((req, res) => __awaiter(v
         data: result
     });
 }));
-exports.categoryPublicController = { getAllPublicCategory };
+const getSlugPubliCategory = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { slug } = req.params;
+    const result = yield category_public_service_1.CategoryPublicService.slugPublicCategoryIntoDB(slug);
+    (0, sendResponse_1.default)(res, {
+        statusCode: http_status_1.default.CREATED,
+        success: true,
+        message: "Category created successfully",
+        data: result
+    });
+}));
+exports.categoryPublicController = { getAllPublicCategory, getSlugPubliCategory };
